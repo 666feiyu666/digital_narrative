@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Narrative Visualization</title>
+  <link rel="stylesheet" href="index.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <nav>
+    <button id="scene0Btn">Home</button>
+    <button id="scene1Btn">Explore 2014</button>
+    <button id="scene2Btn">Explore 2019</button>
+    <button id="scene3Btn">Explore 2024</button>    
+  </nav>  
+
+  <header>
+    <h1>The Rise of Steam 🎮?</h1>
+    <h2 id="overviewTitle">Overview</h2>
+  </header>
+
+  <div id="homeText">
+    <section id="intro">
+      <p>This narrative visualization explores the growth of Steam’s game library over time. 
+      The chart below shows how the number of games released annually changed from 1997 to 2025.</p>
+    </section>
+
+    <section id="story">
+      <h2>Story Highlights</h2>
+      <p><strong>2014:</strong> This year marked a significant increase in game releases. Click and explore what's going on.</p>
+      <p><strong>2019:</strong> A slight dip happened this year. Click and explore what's going on.</p>
+      <p><strong>2024:</strong> A record-breaking peak! Click and explore what's going on.</p>
+    </section>
+  </div>
+
+  <div id="scene1Text" style="display: none;">
+    <section id="scene1">
+      <h2>2014: A Year of Growth</h2>
+      <p>2014 saw a surge in game releases, with over 1,000 titles launched. This bar chart compares the number of unique developers and publishers in 2013 and 2014. </p>
+    </section>
+  </div>
+
+<div id="scene2Text" style="display: none;">
+  <section id="scene2">
+    <h2>2019: A Year of Decline</h2>
+    <p>2019 experienced a slight dip in game releases. This bar chart compares the number of unique developers and publishers in 2018 and 2019.</p>
+  </section>
+</div>
+
+<div id="scene3Text" style="display: none;">
+  <section id="scene3">
+    <h2>2024: A Record-Breaking Year</h2>
+    <p>2024 saw the highest number of game releases in Steam’s history. This bar chart compares the number of unique developers and publishers in 2023 and 2024.</p>
+  </section>
+</div>
+
+  <section id="chart-container">
+    <div id="chart">
+      <div id="dev-chart"></div>
+      <div id="pub-chart"></div>
+    </div>
+  </section>
+
+  <p id="description">Hover over the timeline to see exact numbers. Click on an annotation to explore that year further.</p>
+
+  <script src="index.js"></script>
+</body>
+</html>
