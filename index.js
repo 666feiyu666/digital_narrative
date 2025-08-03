@@ -87,6 +87,7 @@ d3.csv("games.csv", d3.autoType).then(data => {
 });
 
 function renderScene0(data) {
+    d3.select("#findings").html("").style("display", "none");
     d3.select("#chart").style("display", "block");
     d3.select("#homeText").style("display", "block");
     d3.select("#overviewTitle").style("display", "block");
@@ -295,6 +296,14 @@ function renderScene1(data) {
 
     drawBarChart("#dev-chart", devData, "Developers (2013 vs 2014)");
     drawBarChart("#pub-chart", pubData, "Publishers (2013 vs 2014)");
+    d3.select("#findings")
+    .style("display", "block")
+    .html(`
+      <h3>Findings</h3>
+      <p>Both the number of developers and publishers increased significantly from 2013 to 2014. 
+      This supports the surge in game releases, as more participants entered the market on both ends of production and distribution.</p>
+    `);  
+      
 }
 
 function renderScene2(data) {
@@ -393,6 +402,14 @@ function renderScene2(data) {
 
     drawBarChart("#dev-chart", devData, "Developers (2018 vs 2019)");
     drawBarChart("#pub-chart", pubData, "Publishers (2018 vs 2019)");
+    d3.select("#findings")
+    .style("display", "block")
+    .html(`
+      <h3>Findings</h3>
+      <p>Although both developers and publishers slightly increased from 2018 to 2019, 
+      the total number of game releases dropped. This suggests that other factors—such as game development delays, 
+      changing market conditions, or platform policies—might have contributed to the decline.</p>
+    `);  
 }
 
 function renderScene3(data) {
@@ -491,6 +508,13 @@ function renderScene3(data) {
 
     drawBarChart("#dev-chart", devData, "Developers (2023 vs 2024)");
     drawBarChart("#pub-chart", pubData, "Publishers (2023 vs 2024)");
+    d3.select("#findings")
+    .style("display", "block")
+    .html(`
+      <h3>Findings</h3>
+      <p>The number of publishers saw a sharp increase in 2024, yet the number of developers actually decreased compared to 2023. 
+      This is surprising and may imply a trend toward consolidation, outsourcing, or reclassification of development roles within the industry.</p>
+    `);  
 }
 
 // Helper function
